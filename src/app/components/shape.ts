@@ -1,5 +1,6 @@
 import { Injectable } from "@angular/core";
 import { Utilities } from "../services/utilities";
+import { IRGB } from "../interfaces/rgb";
 
 @Injectable()
 export class Shape {
@@ -7,16 +8,11 @@ export class Shape {
     private _shape:createjs.Shape;
     private _outline:createjs.Shape;
 
-    private MIN_WIDTH:number = 50;
-    private MIN_HEIGHT:number = 50;
-    private MAX_WIDTH:number = 1800;
-    private MAX_HEIGHT:number = 1200;
-
     private MIN_VERTICES:number = 3;
     private MAX_VERTICES:number = 9;
 
     private MIN_FLICKERS:number = 20;
-    private MAX_FLICKERS:number = 50;
+    private MAX_FLICKERS:number = 40;
 
     private UNLIKELIHOOD:number = 500;
 
@@ -54,8 +50,8 @@ export class Shape {
     public draw():void {
         let i:number = 0;
 
-        this._container.x = this.$utilities.getRandomBetween(0, this.MAX_WIDTH);
-        this._container.y = this.$utilities.getRandomBetween(0, this.MAX_HEIGHT);
+        this._container.x = this.$utilities.getRandomBetween(0, window.innerWidth);
+        this._container.y = this.$utilities.getRandomBetween(0, window.innerHeight);
         this._container.rotation = this.$utilities.getRandomBetween(0, 359);
 
         this.reset();
@@ -97,9 +93,18 @@ export class Shape {
         this._outline.graphics.clear();
     }
 
+    private getRandomColor():IRGB {
+        return {
+            r: this.$utilities.getRandomBetween(100, 255),
+            g: this.$utilities.getRandomBetween(100, 255),
+            b: this.$utilities.getRandomBetween(100, 255)
+        };
+    }
+
     private begin():void {
-        this._shape.graphics.beginFill("rgba(255, 255, 255, .025)");
-        this._outline.graphics.beginStroke("rgba(255, 255, 255, .05)");
+        let color:IRGB = this.getRandomColor();
+        this._shape.graphics.beginFill("rgba(" + color.r + ", " + color.g + ", " + color.b + ", .025)");
+        this._outline.graphics.beginStroke("rgba(" + color.r + ", " + color.g + ", " + color.b + ", .05)");
         this._outline.graphics.setStrokeStyle(1);
         this.moveTo(0, 0);
     }
@@ -110,8 +115,8 @@ export class Shape {
     }
 
     private drawVertex():void {
-        let x:number = this.$utilities.getRandomBetween(this.MIN_WIDTH, this.MAX_WIDTH),
-            y:number = this.$utilities.getRandomBetween(this.MIN_HEIGHT, this.MAX_HEIGHT);
+        let x:number = this.$utilities.getRandomBetween(0, window.innerWidth),
+            y:number = this.$utilities.getRandomBetween(0, window.innerHeight);
 
         this._shape.graphics.lineTo(x, y);
         this._outline.graphics.lineTo(x, y);
