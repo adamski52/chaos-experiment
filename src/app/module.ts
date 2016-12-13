@@ -10,16 +10,13 @@ import { FlickerComponent } from "./components/flicker";
 import { Utilities } from "./services/utilities";
 import { RandomImage } from "./services/random-image";
 
-import { Router } from './router';
-
 import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
 
 @NgModule({
   imports: [
     BrowserModule,
     HttpModule,
-    FormsModule,
-    Router
+    FormsModule
   ],
   declarations: [
     AppComponent,

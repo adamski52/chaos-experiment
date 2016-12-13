@@ -47,6 +47,11 @@ export class Stage {
         for(let s of this._shapes) {
             s.update();
         }
+
+        for(let t of this._tiles) {
+            t.update();
+        }
+
         this._stage.update();
     }
 

@@ -21,6 +21,6 @@ export class FlickerComponent implements OnInit {
 
     private flicker():void {
         let num:number = this.$utilities.getRandomBetween(0, this.UNLIKELIHOOD);
-        this._renderer.setElementStyle(this._el.nativeElement, "visibility", num === 0 ?  "hidden" : "visible";
+        this._renderer.setElementStyle(this._el.nativeElement, "visibility", num === 0 ?  "hidden" : "visible");
     }
 }

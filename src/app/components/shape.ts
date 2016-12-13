@@ -11,8 +11,8 @@ export class Shape {
     private MIN_VERTICES:number = 3;
     private MAX_VERTICES:number = 9;
 
-    private MIN_FLICKERS:number = 20;
-    private MAX_FLICKERS:number = 40;
+    private MIN_FLICKERS:number = 10;
+    private MAX_FLICKERS:number = 15;
 
     private UNLIKELIHOOD:number = 500;
 
