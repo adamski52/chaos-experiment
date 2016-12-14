@@ -51,7 +51,7 @@ export class Stage {
             clearTimeout(this._mouseMoveInterval);
             this._mouseMoveInterval = setTimeout(() => {
                 this.menu.moveTo(e.clientX, e.clientY);
-            }, 300);
+            }, 600);
         });
 
         window.addEventListener("resize", () => {
