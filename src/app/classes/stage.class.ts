@@ -1,8 +1,10 @@
+/// <reference path="../../../node_modules/@types/createjs/index.d.ts" />
+
 import { Injectable } from "@angular/core";
-import { Shape } from "./shape";
-import { Utilities } from "../services/utilities";
-import { Tile } from "./tile";
-import { RandomImage } from "../services/random-image";
+import { Shape } from "./shape.class";
+import { Utilities } from "../services/utilities.service";
+import { Tile } from "./tile.class";
+import { RandomImage } from "../services/random-image.service";
 
 @Injectable()
 export class Stage {

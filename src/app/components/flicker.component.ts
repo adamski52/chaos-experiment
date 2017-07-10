@@ -1,6 +1,6 @@
 import {Component, Renderer, ElementRef, OnInit} from '@angular/core';
 
-import {Utilities} from "../services/utilities";
+import {Utilities} from "../services/utilities.service";
 
 @Component({
     selector: 'flicker',

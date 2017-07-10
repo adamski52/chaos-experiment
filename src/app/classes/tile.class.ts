@@ -1,6 +1,8 @@
+/// <reference path="../../../node_modules/@types/createjs/index.d.ts" />
+
 import { Injectable } from "@angular/core";
-import { RandomImage } from "../services/random-image";
-import { Utilities } from "../services/utilities";
+import { RandomImage } from "../services/random-image.service";
+import { Utilities } from "../services/utilities.service";
 
 @Injectable()
 export class Tile {

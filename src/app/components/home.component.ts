@@ -1,11 +1,11 @@
 import {OnInit, Component} from "@angular/core";
-import {Stage} from "./stage";
-import {Utilities} from "../services/utilities";
-import {RandomImage} from "../services/random-image";
+import {Stage} from "../classes/stage.class";
+import {Utilities} from "../services/utilities.service";
+import {RandomImage} from "../services/random-image.service";
 
 @Component({
   selector: "chaos-home",
-  templateUrl: "../templates/home.html"
+  templateUrl: "./home.component.html"
 })
 
 export class HomeComponent implements OnInit {

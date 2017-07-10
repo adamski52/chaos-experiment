@@ -1,6 +1,8 @@
+/// <reference path="../../../node_modules/@types/createjs/index.d.ts" />
+
 import { Injectable } from "@angular/core";
-import { Utilities } from "../services/utilities";
-import { IRGB } from "../interfaces/rgb";
+import { Utilities } from "../services/utilities.service";
+import { IRGB } from "../interfaces/rgb.interface";
 
 @Injectable()
 export class Shape {
