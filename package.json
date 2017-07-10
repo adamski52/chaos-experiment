@@ -6,7 +6,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "publish": "node scripts/deploy.js"
   },
   "private": true,
   "dependencies": {
@@ -29,6 +30,7 @@
     "@types/easeljs": "^0.8.36",
     "@types/node": "~6.0.60",
     "codelyzer": "~2.0.0",
+    "travis-ftpr": "^0.1.0",
     "ts-node": "~2.0.0",
     "tslint": "~4.5.0",
     "typescript": "~2.0.0"
