@@ -1,0 +1,9 @@
+language: node_js
+node_js:
+  - "6"
+
+script:
+  - npm run build || exit 1
+
+after_success:
+  - test $TRAVIS_BRANCH = "master" && (npm run publish $FTP_HOST $FTP_USERNAME $FTP_PASSWORD dist public_html/repos/chaos-experiment || exit 1)
