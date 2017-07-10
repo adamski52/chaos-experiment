@@ -16,5 +16,6 @@
   "awesomeTypescriptLoaderOptions": {
     "forkChecker": true,
     "useWebpackText": true
-  }
+  },
+  "skipLibCheck": true
 }
