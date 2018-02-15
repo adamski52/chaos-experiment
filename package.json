@@ -5,6 +5,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "test": "echo \"Tests coming soon!\"",
     "build": "ng build --base-href /repos/chaos-experiment/",
     "lint": "ng lint",
     "publish": "node scripts/deploy.js"
@@ -30,7 +31,9 @@
     "@types/easeljs": "^0.8.36",
     "@types/node": "~6.0.60",
     "codelyzer": "~2.0.0",
-    "travis-ftpr": "^0.1.0",
+    "scp2": "^0.5.0",
+    "ssh2": "^0.5.5",
+    "tar": "^4.3.3",
     "ts-node": "~2.0.0",
     "tslint": "~4.5.0",
     "typescript": "~2.0.0"
